@@ -2,4 +2,5 @@
 my_var="Hello, Linux"
 
 #view the value of the variable,$ tells the shell to substitute the value of the variable.Otherwise it will display my_var
+#refer to screenshot Lss1 in README.md for result
 echo $my_var

@@ -1,6 +1,6 @@
 
 ##Screenshots
 
-#Lss1
+#lss1
 
 ![Screenshot](Lss1.png)

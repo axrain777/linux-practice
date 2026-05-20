@@ -20,4 +20,4 @@ I forgotten to document this right from the beginning so it will be starting fro
 
 ##Screenshots
 
-Lss1.png
+![Screenshot](Lss1.png)

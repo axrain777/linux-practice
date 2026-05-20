@@ -1,6 +1,7 @@
 # Linux Learning Journey
 
 This repository documents my Linux learning progress, labs, notes, and practice projects.
+I forgotten to document this right from the beginning so it will be starting from halfway through :)
 
 ## Topics Covered
 - Linux commands

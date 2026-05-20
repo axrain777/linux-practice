@@ -18,6 +18,4 @@ I forgotten to document this right from the beginning so it will be starting fro
 - Prepare for cloud and DevOps roles
 - Practice automation with Bash and Python
 
-##Screenshots
 
-![Screenshot](Lss1.png)

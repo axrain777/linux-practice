@@ -1,1 +1,5 @@
+#creating shell variable and assign a value
+my_var="Hello, Linux"
 
+#view the value of the variable,$ tells the shell to substitute the value of the variable.Otherwise it will display my_var
+echo $my_var

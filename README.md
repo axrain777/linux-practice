@@ -17,3 +17,7 @@ I forgotten to document this right from the beginning so it will be starting fro
 - Learn Linux system administration
 - Prepare for cloud and DevOps roles
 - Practice automation with Bash and Python
+
+##Screenshots
+
+Lss1.png

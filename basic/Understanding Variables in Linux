@@ -2,5 +2,34 @@
 my_var="Hello, Linux"
 
 #view the value of the variable,$ tells the shell to substitute the value of the variable.Otherwise it will display my_var
-#refer to screenshot Lss1 in README.md for result
+#refer to screenshot lss1 in README.md for result
 echo $my_var
+
+#Modifying the PATH Environment Variable
+#create new directory
+mkdir ~/my_scripts
+
+#add  new directory to PATH so that this variable can be used for child process
+export PATH="$PATH:$HOME/my_scripts"
+
+#Verify that the new directory has been added
+#refer to screenshot lss3 in README.md for result
+echo $PATH
+
+#create new file into this new directory without nano.
+cat << 'EOF' > ~/my_scripts/hello.sh
+#!/bin/zsh 
+echo "Hello from my custom script!"
+EOF
+
+#Make the script executable
+chmod +x ~/my_scripts/hello.sh
+
+#excute script
+#refer to screenshot lss4 in README.md for result
+hello.sh
+
+#running script from different directory to see if we do it correctly for PATH and export
+#refer to screenshot lss5 in README.md for result
+cd /tmp
+hello.sh

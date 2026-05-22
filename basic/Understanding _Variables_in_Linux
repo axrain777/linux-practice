@@ -33,3 +33,44 @@ hello.sh
 #refer to screenshot lss5 in README.md for result
 cd /tmp
 hello.sh
+
+#Learning how to Make Environment Variables Permanent because environment variable will be lost when we close the terminal and sometimes we need the variable for next project
+#open the shell file in home directory
+nano ~/.zshrc
+
+#adding the variable we want to be permanent inside shell file so that it will be executed everytime the terminal starts
+export MY_ENV_VAR="This is an environment variable"
+export PATH="$PATH:$HOME/my_scripts"
+
+#apply changes without restarting  terminal
+source ~/.zshrc
+
+##Understanding Important Environment Variables
+
+#Points to the home directory of the current user.
+echo $HOME
+
+#Contains the username of the current user
+echo $USER
+
+#Specifies the user's default shell.
+echo $SHELL
+
+#contains the path of the current directory.
+echo $PWD
+
+#Specifies the type of terminal to emulate when running the shell.
+echo $TERM
+
+##Remove Environment Variables, sometimes we need to remove certain environment variable so this is important
+
+#refer to screenshot lss6 in readme.md for result
+#view previously created variable
+echo $MY_ENV_VAR
+
+#use unset command to remove
+unset MY_ENV_VAR
+
+#verify if removal is done
+echo $MY_ENV_VAR
+

@@ -20,3 +20,7 @@
 #lss5
 
 ![Screenshot](lss5.png)
+
+#lss6
+
+![Screenshot](lss6.png)

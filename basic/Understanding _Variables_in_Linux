@@ -71,6 +71,6 @@ echo $MY_ENV_VAR
 #use unset command to remove
 unset MY_ENV_VAR
 
-#verify if removal is done
+#verify if removal is done, terminal display the text "MY_ENV_VAR instead of the value of the variable so removal is done correctly
 echo $MY_ENV_VAR
 

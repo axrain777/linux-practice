@@ -24,3 +24,8 @@
 #lss6
 
 ![Screenshot](lss6.png)
+
+
+#lss7
+
+![Screenshot](lss7.png)

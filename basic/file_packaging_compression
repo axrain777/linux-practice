@@ -1,0 +1,25 @@
+##in this file , i will learn document how to package and compress files 
+and directories using common Linux commands such as tar, gzip, and zip.this will allow me to  efficiently store and transfer data
+
+#create sample directory structure
+cd ~/project
+mkdir -p test_dir/{subdir1,subdir2}
+echo "This is file 1" > test_dir/file1.txt
+echo "This is file 2" > test_dir/file2.txt
+echo "This is in subdir1" > test_dir/subdir1/subfile1.txt
+echo "This is in subdir2" > test_dir/subdir2/subfile2.txt  
+
+#verify the structure that i have created.
+#refer to screenshot lss8 in readme.md for result
+tree test_dir
+
+#Packaging Files with tar, tar is usually used to bundle multiple files and directories into a single file.
+cd ~/project
+
+#create archive using tar command.
+#refer to screenshot lss9 in readme.md for result
+tar -cvf test_archive.tar test_dir
+
+#command to list the content of the archive content from file named test_archive.tar
+#refer to screenshot lss10 in readme.md for result
+tar -tvf test_archive.tar

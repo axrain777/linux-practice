@@ -1,2 +1,13 @@
 #set up and manage environment variables in a Linux system to create a consistent development environment.
 
+#open text editor
+nano ~/.zshrc
+
+#create the permanent environment variable
+export PROJECT_DIR=/home/labex/project
+
+#reload configuration file to apply changes
+source ~/.zshrc
+
+#verify if environment variable is set correctly
+echo $PROJECT_DIR

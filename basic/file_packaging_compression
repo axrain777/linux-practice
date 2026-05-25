@@ -23,3 +23,46 @@ tar -cvf test_archive.tar test_dir
 #command to list the content of the archive content from file named test_archive.tar
 #refer to screenshot lss10 in readme.md for result
 tar -tvf test_archive.tar
+
+##Extracting Files from a tar Archive
+#create a directory for the extracted files.
+mkdir extracted_tar
+
+#command to extract the files from archive
+tar -xvf test_archive.tar -C extracted_tar
+
+#verify to see if extraction is done correctly
+tree extracted_tar
+
+##Compressing Files with gzip, the naming will be change to test_archive.tar.gz after compressing.
+gzip test_archive.tar
+
+#check the file size of the compressed file.
+#refer to screenshot lss11 in readme.md for result
+ls -lh test_archive.tar.gz
+
+#Creating a Compressed Archive in One Step
+#refer to screenshot lss12 in readme.md for result
+tar -czvf test_combined.tar.gz test_dir
+
+#view the contents of this compressed archive without extracting
+#refer to screenshot lss13 in readme.md for result
+tar -tzvf test_combined.tar.gz
+
+#Extracting Files from a Compressed Archive
+#create a new directory for the extracted files
+mkdir extracted
+
+#command to extract the files to the new directory
+#refer to screenshot lss14 in readme.md for result
+tar -xzvf test_combined.tar.gz -C extracted
+
+#Using zip for Cross-Platform Compatibility because zip is a better compatible option for window
+#zip and create a new zip file name
+#refer to screenshot lss15 in readme.md for result
+zip -r test_archive.zip test_dir
+
+#command to unzip files to a new directory
+#refer to screenshot lss16 in readme.md for result
+unzip -d unzipped_files test_archive.zip
+

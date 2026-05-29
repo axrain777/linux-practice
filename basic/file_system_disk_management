@@ -1,1 +1,50 @@
+##exploring file system and disk management
+#Viewing Disk Usage, useful when we run into low memory so we can identify which file or directory is taking up the space.
+df
 
+#running on a more readable format
+df -h
+
+#to check disk usage for specific file or directory for example etc/hosts
+df -h /etc/hosts
+
+#if we want to know more in detail of the disk usage, we can use du 
+du -h ~
+
+#if we want to know the total size of a directory, we can use -sh.
+du -sh ~
+
+#if we want to know sizes of immediate subdirectory, we can use --max-depth to control
+#this will give you the sizes of 1 subdirectory, if we want to go further down the subdirectory 
+we can increase the max depth , for example max depth = 2.
+du -h --max-depth=1 ~
+
+#command to find largest item in the directory,sort -rh sorts the list in reserve order(largest first). head -n 10 shows only the first 10 lines of output
+#refer to screenshot lss17 in readme.md for result
+du -h ~ | sort -rh | head -n 10
+
+##Creating and Managing a Virtual Disk,Virtual disks are useful for testing disk operations safely without risking real hardware 
+and creating isolated storage spaces
+#create virtual disk
+dd if=/dev/zero of=virtual.img bs=1M count=256
+
+#verify file size
+#refer to screenshot lss18 in readme.md for result
+ls -1h virtual.img
+
+#creating a new filesystem inside virutal disk  and set up basic structure needed to store files and directories
+sudo mkfs.ext4 virtual.img
+
+#next will be creating a mount point where content of virutal disk will appear
+sudo mkdir /mnt/virtualdisk
+
+#now we can mount the virutal disk,-o loop option tells Linux to treat our file as if it were a real disk device
+and we will mount the virutal disk to the new mount point
+sudo mount -o loop virtual.img /mnt/virtualdisk
+
+#verify if disk is mounted
+#refer to screenshot lss19 in readme.md for result
+mount | grep virtualdisk
+
+#unmount virutal disk after using.
+sudo umount /mnt/virtualdisk

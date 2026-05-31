@@ -48,3 +48,10 @@ mount | grep virtualdisk
 
 #unmount virutal disk after using.
 sudo umount /mnt/virtualdisk
+
+#Managing Disk Partitions with fdisk
+##view all details like disk size,number of sectors and partition table
+sudo fdisk -l
+
+#view the partition information of my virutal disk
+sudo fdisk -l virtual.img
